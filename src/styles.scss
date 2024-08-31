@@ -1,1 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+@use "@angular/material" as mat;
+@use "assets/styles/themes.scss" as themes;
+@include mat.core();
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.dark-theme {
+  @include mat.all-component-colors(themes.$dark-theme);
+  background-color: #141314;
+}
+
+.light-theme {
+  @include mat.all-component-colors(themes.$light-theme);
+  background-color: #f4f4f4;
+}

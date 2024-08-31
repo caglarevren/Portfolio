@@ -1,0 +1,48 @@
+<button mat-icon-button (click)="sidenav.toggle()" class="hamburger-btn">
+  <mat-icon>menu</mat-icon>
+</button>
+
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #sidenav mode="side" opened class="sidenav">
+    <div class="sidenav-inner-container">
+      <mat-nav-list>
+        <a mat-list-item href="#" routerLink="/home">
+          <div class="sidebar-item">
+            <mat-icon>home</mat-icon>
+            <span>Home</span>
+          </div>
+        </a>
+        <a mat-list-item href="#" routerLink="/about">
+          <div class="sidebar-item">
+            <mat-icon>person</mat-icon>
+            <span>Deneyimler</span>
+          </div>
+        </a>
+        <a mat-list-item href="#" routerLink="/projects">
+          <div class="sidebar-item">
+            <mat-icon>work</mat-icon>
+            <span>Projeler</span>
+          </div>
+        </a>
+        <a mat-list-item href="#" routerLink="/contact">
+          <div class="sidebar-item">
+            <mat-icon>mail</mat-icon>
+            <span>İletişim</span>
+          </div>
+        </a>
+      </mat-nav-list>
+      <button mat-icon-button (click)="toggleTheme()">
+        <mat-icon>{{
+          themeService.isDarkMode() ? "brightness_7" : "brightness_4"
+        }}</mat-icon>
+      </button>
+    </div>
+  </mat-sidenav>
+
+  <div></div>
+  <mat-sidenav-content
+    [ngClass]="{ 'dark-mode': isDarkMode, 'light-mode': !isDarkMode }"
+  >
+    sağ
+  </mat-sidenav-content>
+</mat-sidenav-container>
