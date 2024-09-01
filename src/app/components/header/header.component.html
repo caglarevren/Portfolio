@@ -9,7 +9,7 @@
         <a mat-list-item href="#" routerLink="/home">
           <div class="sidebar-item">
             <mat-icon>home</mat-icon>
-            <span>Home</span>
+            <span>{{ "homepage" | translate }}</span>
           </div>
         </a>
         <a mat-list-item href="#" routerLink="/about">
@@ -31,6 +31,8 @@
           </div>
         </a>
       </mat-nav-list>
+      <button (click)="translateText('en')">English</button>
+      <button (click)="translateText('tr')">türk</button>
       <button mat-icon-button (click)="toggleTheme()">
         <mat-icon>{{
           themeService.isDarkMode() ? "brightness_7" : "brightness_4"

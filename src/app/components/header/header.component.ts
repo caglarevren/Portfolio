@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -17,6 +18,7 @@ import { ThemeService } from '../../../theme/theme.service';
     MatIconModule,
     MatListModule,
     MatButtonModule,
+    TranslateModule,
   ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
@@ -32,5 +34,11 @@ export class HeaderComponent {
   toggleTheme(): void {
     this.themeService.toggleTheme();
     this.isDarkMode = this.themeService.isDarkMode();
+  }
+
+  translate: TranslateService = inject(TranslateService);
+
+  translateText(lang: string): void {
+    this.translate.use(lang);
   }
 }
