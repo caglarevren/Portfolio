@@ -1,0 +1,25 @@
+<mat-form-field appearance="outline">
+  <mat-select
+    [(value)]="selectedCountry"
+    (selectionChange)="changeLanguage($event.value)"
+    disableRipple
+  >
+    <mat-select-trigger>
+      <img
+        [src]="getFlag(selectedCountry)"
+        alt="Selected Flag"
+        class="flag-icon"
+      />
+    </mat-select-trigger>
+    <mat-option value="en">
+      <img
+        src="assets/images/england.png"
+        alt="England Flag"
+        class="flag-icon"
+      />
+    </mat-option>
+    <mat-option value="tr">
+      <img src="assets/images/turkey.png" alt="Turkey Flag" class="flag-icon" />
+    </mat-option>
+  </mat-select>
+</mat-form-field>

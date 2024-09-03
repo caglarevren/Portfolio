@@ -31,13 +31,15 @@
           </div>
         </a>
       </mat-nav-list>
-      <button (click)="translateText('en')">English</button>
-      <button (click)="translateText('tr')">türk</button>
-      <button mat-icon-button (click)="toggleTheme()">
-        <mat-icon>{{
-          themeService.isDarkMode() ? "brightness_7" : "brightness_4"
-        }}</mat-icon>
-      </button>
+
+      <div>
+        <app-language-selector />
+        <button mat-icon-button (click)="toggleTheme()">
+          <mat-icon>{{
+            themeService.isDarkMode() ? "brightness_7" : "brightness_4"
+          }}</mat-icon>
+        </button>
+      </div>
     </div>
   </mat-sidenav>
 

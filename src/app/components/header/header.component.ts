@@ -7,6 +7,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
 import { ThemeService } from '../../../theme/theme.service';
+import { LanguageSelectorComponent } from '../language-selector/language-selector.component';
 
 @Component({
   selector: 'app-header',
@@ -19,12 +20,14 @@ import { ThemeService } from '../../../theme/theme.service';
     MatListModule,
     MatButtonModule,
     TranslateModule,
+    LanguageSelectorComponent,
   ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
   isDarkMode: boolean = false;
+  translate: TranslateService = inject(TranslateService);
   constructor(public themeService: ThemeService) {}
 
   ngOnInit(): void {
@@ -34,11 +37,5 @@ export class HeaderComponent {
   toggleTheme(): void {
     this.themeService.toggleTheme();
     this.isDarkMode = this.themeService.isDarkMode();
-  }
-
-  translate: TranslateService = inject(TranslateService);
-
-  translateText(lang: string): void {
-    this.translate.use(lang);
   }
 }
