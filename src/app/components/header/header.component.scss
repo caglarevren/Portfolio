@@ -1,23 +1,73 @@
-.sidenav-container {
-  height: 100vh;
-}
-
 .sidenav {
   width: 88px;
+
+  @media screen and (max-width: 600px) {
+    width: 200px;
+  }
+
+  &-container {
+    height: 100vh;
+
+    &-inner {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+
+      @media screen and (max-width: 600px) {
+        align-items: flex-start;
+      }
+    }
+  }
+
+  &-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+
+    @media screen and (max-width: 600px) {
+      flex-direction: row;
+    }
+
+    &-text {
+      font-size: 12px;
+    }
+  }
+
+  &-bottom {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (max-width: 600px) {
+      align-items: center;
+      width: 100%;
+    }
+  }
 }
 
 .hamburger-btn {
   display: none;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 600px) {
     display: block;
   }
+}
+
+mat-sidenav {
+  border: none;
 }
 
 mat-toolbar {
   position: fixed;
   width: 100%;
   z-index: 2;
+}
+
+mat-icon {
+  font-size: 22px;
 }
 
 .dark-mode {
@@ -28,16 +78,19 @@ mat-toolbar {
   background-color: #fdfbff;
 }
 
-.sidebar-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+.theme-switch-btn {
+  border-radius: 32px;
+  font-size: 14px;
+  height: 48px;
+  margin-bottom: 20px;
 
-.sidenav-inner-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
+  @media screen and (min-width: 600px) {
+    display: none;
+  }
+
+  &-desktop {
+    @media screen and (max-width: 600px) {
+      display: none;
+    }
+  }
 }

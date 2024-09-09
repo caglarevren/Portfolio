@@ -4,12 +4,13 @@
     (selectionChange)="changeLanguage($event.value)"
     disableRipple
   >
-    <mat-select-trigger>
+    <mat-select-trigger class="select-trigger">
       <img
         [src]="getFlag(selectedCountry)"
         alt="Selected Flag"
         class="flag-icon"
       />
+      <span class="flag-text">{{ selectedCountryText }}</span>
     </mat-select-trigger>
     <mat-option value="en">
       <img
@@ -17,9 +18,11 @@
         alt="England Flag"
         class="flag-icon"
       />
+      <span class="flag-text">English</span>
     </mat-option>
     <mat-option value="tr">
       <img src="assets/images/turkey.png" alt="Turkey Flag" class="flag-icon" />
+      <span class="flag-text">Türkçe</span>
     </mat-option>
   </mat-select>
 </mat-form-field>

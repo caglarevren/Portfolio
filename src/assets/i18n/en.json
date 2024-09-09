@@ -2,5 +2,7 @@
   "homepage": "Homepage",
   "experiences": "Experiences",
   "projects": "Projects",
-  "contact": "Contact Me"
+  "contact": "Contact Me",
+  "switchToDarkMode": "Switch to dark mode",
+  "switchToLightMode": "Switch to light mode"
 }

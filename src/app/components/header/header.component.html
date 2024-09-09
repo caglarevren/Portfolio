@@ -1,49 +1,79 @@
-<button mat-icon-button (click)="sidenav.toggle()" class="hamburger-btn">
+<button
+  *ngIf="!sidenav.opened"
+  mat-icon-button
+  (click)="sidenav.toggle()"
+  class="hamburger-btn"
+>
   <mat-icon>menu</mat-icon>
 </button>
 
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #sidenav mode="side" opened class="sidenav">
-    <div class="sidenav-inner-container">
+  <mat-sidenav #sidenav mode="side" class="sidenav">
+    <div class="sidenav-container-inner">
       <mat-nav-list>
+        <button
+          *ngIf="sidenav.opened"
+          mat-icon-button
+          (click)="sidenav.toggle()"
+          class="hamburger-btn"
+        >
+          <mat-icon>menu</mat-icon>
+        </button>
         <a mat-list-item href="#" routerLink="/home">
-          <div class="sidebar-item">
+          <div class="sidenav-item">
             <mat-icon>home</mat-icon>
-            <span>{{ "homepage" | translate }}</span>
+            <span class="sidenav-item-text">{{ "homepage" | translate }}</span>
           </div>
         </a>
         <a mat-list-item href="#" routerLink="/about">
-          <div class="sidebar-item">
+          <div class="sidenav-item">
             <mat-icon>person</mat-icon>
-            <span>Deneyimler</span>
+            <span class="sidenav-item-text">{{
+              "experiences" | translate
+            }}</span>
           </div>
         </a>
         <a mat-list-item href="#" routerLink="/projects">
-          <div class="sidebar-item">
+          <div class="sidenav-item">
             <mat-icon>work</mat-icon>
-            <span>Projeler</span>
+            <span class="sidenav-item-text">{{ "projects" | translate }}</span>
           </div>
         </a>
         <a mat-list-item href="#" routerLink="/contact">
-          <div class="sidebar-item">
+          <div class="sidenav-item">
             <mat-icon>mail</mat-icon>
-            <span>İletişim</span>
+            <span class="sidenav-item-text">{{ "contact" | translate }}</span>
           </div>
         </a>
       </mat-nav-list>
 
-      <div>
+      <div class="sidenav-bottom">
         <app-language-selector />
-        <button mat-icon-button (click)="toggleTheme()">
+        <button
+          mat-icon-button
+          (click)="toggleTheme()"
+          class="theme-switch-btn-desktop"
+        >
           <mat-icon>{{
             themeService.isDarkMode() ? "brightness_7" : "brightness_4"
           }}</mat-icon>
+        </button>
+        <button
+          mat-stroked-button
+          (click)="toggleTheme()"
+          class="theme-switch-btn"
+        >
+          {{
+            (themeService.isDarkMode()
+              ? "switchToDarkMode"
+              : "switchToLightMode"
+            ) | translate
+          }}
         </button>
       </div>
     </div>
   </mat-sidenav>
 
-  <div></div>
   <mat-sidenav-content
     [ngClass]="{ 'dark-mode': isDarkMode, 'light-mode': !isDarkMode }"
   >

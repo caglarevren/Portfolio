@@ -4,11 +4,6 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { isPlatformBrowser } from '@angular/common';
 
-interface Language {
-  value: string;
-  viewValue: string;
-}
-
 @Component({
   selector: 'app-language-selector',
   standalone: true,
@@ -19,6 +14,7 @@ interface Language {
 export class LanguageSelectorComponent {
   translate: TranslateService = inject(TranslateService);
   selectedCountry = 'en';
+  selectedCountryText = 'English';
   isBrowser: boolean;
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {
@@ -30,15 +26,24 @@ export class LanguageSelectorComponent {
       const locale = localStorage.getItem('locale') ?? 'en';
       this.translate.setDefaultLang(locale);
       this.selectedCountry = locale;
+
+      if (locale === 'tr') {
+        this.selectedCountryText = 'Türkçe';
+      } else {
+        this.selectedCountryText = 'English';
+      }
+
       this.translate.use(locale);
       if (!localStorage.getItem('locale')) {
         localStorage.setItem('locale', 'en');
         this.selectedCountry = 'en';
+        this.selectedCountryText = 'English';
       }
     } else {
       this.translate.setDefaultLang('en');
       this.translate.use('en');
       this.selectedCountry = 'en';
+      this.selectedCountryText = 'English';
     }
   }
 
@@ -65,6 +70,12 @@ export class LanguageSelectorComponent {
     if (this.isBrowser) {
       localStorage.setItem('locale', lang);
       this.selectedCountry = lang;
+    }
+
+    if (lang === 'tr') {
+      this.selectedCountryText = 'Türkçe';
+    } else {
+      this.selectedCountryText = 'English';
     }
   }
 }
