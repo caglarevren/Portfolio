@@ -4,6 +4,7 @@ import { Component, ViewChild, ChangeDetectorRef } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
 import { HeaderComponent } from './components/header/header.component';
+import { HeroComponent } from './components/hero/hero.component';
 
 import { MatSidenavModule, MatSidenav } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
@@ -16,10 +17,11 @@ import { MatButtonModule } from '@angular/material/button';
   imports: [
     RouterOutlet,
     CommonModule,
+    HeaderComponent,
+    HeroComponent,
     MatIconModule,
     MatSidenavModule,
     MatButtonModule,
-    HeaderComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

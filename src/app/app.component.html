@@ -16,8 +16,9 @@
   </mat-sidenav>
   <mat-sidenav-content
     [ngClass]="{ 'dark-theme': isDarkMode, 'light-theme': !isDarkMode }"
+    class="sidenav-content"
   >
-    sağ
+    <app-hero />
   </mat-sidenav-content>
 </mat-sidenav-container>
 <router-outlet />

@@ -4,5 +4,8 @@
   "projects": "Projeler",
   "contact": "İletişim",
   "switchToDarkMode": "Koyu temaya geç",
-  "switchToLightMode": "Açık temaya geç"
+  "switchToLightMode": "Açık temaya geç",
+  "heroParagraphOne": "Eğitimimi, Ankara Yıldırım Beyazıt Üniversitesi mühendislik fakultesinde tamamladım. Eğitim hayatımdan sonra yazılım dünyasına yöneldim ve ön yüz geliştirme alanında uzmanlaştım. React.js, Vue.js, Angular.js, Next.js, Nuxt.js gibi modern JavaScript framework'leri üzerine yoğunlaşarak, çeşitli büyük projelerde yer aldım.",
+  "heroParagraphTwo": "Profesyonel kariyerime Etstur'da ön yüz geliştirici olarak başladım ve ardından Huawei, Softtech gibi büyük firmalarda çalışarak deneyim kazandım. Şu anda Payten'de ön yüz geliştirici olarak görev yapmakta ve ödeme sistemleri üzerine çalışmaktayım.",
+  "heroParagraphThree": "Kariyerimde, kullanıcı arayüzlerini yeniden tasarlamak, performans optimizasyonu yapmak ve yeni özellikler eklemek gibi görevlere ek olarak kullanıcı kimlik doğrulama, ödeme sistemleri ve form yönetimi gibi gelişmiş yazılım çözümlerine katkıda bulunuyorum."
 }

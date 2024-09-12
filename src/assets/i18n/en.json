@@ -4,5 +4,8 @@
   "projects": "Projects",
   "contact": "Contact Me",
   "switchToDarkMode": "Switch to dark mode",
-  "switchToLightMode": "Switch to light mode"
+  "switchToLightMode": "Switch to light mode",
+  "heroParagraphOne": "I completed my education at Ankara Yıldırım Beyazıt University's Faculty of Engineering. After my education, I turned to the world of software development and specialized in front-end development. Focusing on modern JavaScript frameworks such as React.js, Vue.js, Angular.js, Next.js, and Nuxt.js, I have been involved in various large-scale projects.",
+  "heroParagraphTwo": "I started my professional career as a front-end developer at Etstur, and gained experience by working at large companies like Huawei and Softtech. I am currently working as a front-end developer at Payten, focusing on payment systems.",
+  "heroParagraphThree": "Throughout my career, I have contributed to redesigning user interfaces, optimizing performance, and adding new features, as well as working on advanced software solutions such as user authentication, payment systems, and form management."
 }
