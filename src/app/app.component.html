@@ -1,2 +1,23 @@
-<app-header />
+<button
+  *ngIf="!sidenav.opened"
+  mat-icon-button
+  (click)="sidenav.toggle()"
+  class="hamburger-btn"
+>
+  <mat-icon>menu</mat-icon>
+</button>
+<mat-sidenav-container class="sidenav">
+  <mat-sidenav #sidenav mode="side" class="sidenav-inner">
+    <app-header
+      [isDarkMode]="isDarkMode"
+      (darkModeChange)="onDarkModeChange($event)"
+      [sidenav]="sidenav"
+    />
+  </mat-sidenav>
+  <mat-sidenav-content
+    [ngClass]="{ 'dark-theme': isDarkMode, 'light-theme': !isDarkMode }"
+  >
+    sağ
+  </mat-sidenav-content>
+</mat-sidenav-container>
 <router-outlet />

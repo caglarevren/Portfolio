@@ -1,82 +1,55 @@
-<button
-  *ngIf="!sidenav.opened"
-  mat-icon-button
-  (click)="sidenav.toggle()"
-  class="hamburger-btn"
->
-  <mat-icon>menu</mat-icon>
-</button>
-
-<mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #sidenav mode="side" class="sidenav">
-    <div class="sidenav-container-inner">
-      <mat-nav-list>
-        <button
-          *ngIf="sidenav.opened"
-          mat-icon-button
-          (click)="sidenav.toggle()"
-          class="hamburger-btn"
-        >
-          <mat-icon>menu</mat-icon>
-        </button>
-        <a mat-list-item href="#" routerLink="/home">
-          <div class="sidenav-item">
-            <mat-icon>home</mat-icon>
-            <span class="sidenav-item-text">{{ "homepage" | translate }}</span>
-          </div>
-        </a>
-        <a mat-list-item href="#" routerLink="/about">
-          <div class="sidenav-item">
-            <mat-icon>person</mat-icon>
-            <span class="sidenav-item-text">{{
-              "experiences" | translate
-            }}</span>
-          </div>
-        </a>
-        <a mat-list-item href="#" routerLink="/projects">
-          <div class="sidenav-item">
-            <mat-icon>work</mat-icon>
-            <span class="sidenav-item-text">{{ "projects" | translate }}</span>
-          </div>
-        </a>
-        <a mat-list-item href="#" routerLink="/contact">
-          <div class="sidenav-item">
-            <mat-icon>mail</mat-icon>
-            <span class="sidenav-item-text">{{ "contact" | translate }}</span>
-          </div>
-        </a>
-      </mat-nav-list>
-
-      <div class="sidenav-bottom">
-        <app-language-selector />
-        <button
-          mat-icon-button
-          (click)="toggleTheme()"
-          class="theme-switch-btn-desktop"
-        >
-          <mat-icon>{{
-            themeService.isDarkMode() ? "brightness_7" : "brightness_4"
-          }}</mat-icon>
-        </button>
-        <button
-          mat-stroked-button
-          (click)="toggleTheme()"
-          class="theme-switch-btn"
-        >
-          {{
-            (themeService.isDarkMode()
-              ? "switchToDarkMode"
-              : "switchToLightMode"
-            ) | translate
-          }}
-        </button>
+<div class="header">
+  <mat-nav-list>
+    <button
+      *ngIf="sidenav.opened"
+      mat-icon-button
+      (click)="sidenav.toggle()"
+      class="hamburger-btn"
+    >
+      <mat-icon>menu</mat-icon>
+    </button>
+    <a mat-list-item href="#" routerLink="/home">
+      <div class="header-item">
+        <mat-icon>home</mat-icon>
+        <span class="header-item-text">{{ "homepage" | translate }}</span>
       </div>
-    </div>
-  </mat-sidenav>
+    </a>
+    <a mat-list-item href="#" routerLink="/about">
+      <div class="header-item">
+        <mat-icon>person</mat-icon>
+        <span class="header-item-text">{{ "experiences" | translate }}</span>
+      </div>
+    </a>
+    <a mat-list-item href="#" routerLink="/projects">
+      <div class="header-item">
+        <mat-icon>work</mat-icon>
+        <span class="header-item-text">{{ "projects" | translate }}</span>
+      </div>
+    </a>
+    <a mat-list-item href="#" routerLink="/contact">
+      <div class="header-item">
+        <mat-icon>mail</mat-icon>
+        <span class="header-item-text">{{ "contact" | translate }}</span>
+      </div>
+    </a>
+  </mat-nav-list>
 
-  <mat-sidenav-content
-    [ngClass]="{ 'dark-mode': isDarkMode, 'light-mode': !isDarkMode }"
-  >
-    sağ
-  </mat-sidenav-content>
-</mat-sidenav-container>
+  <div class="header-bottom">
+    <app-language-selector />
+    <button
+      mat-icon-button
+      (click)="toggleTheme()"
+      class="theme-switch-btn-desktop"
+    >
+      <mat-icon>{{
+        themeService.isDarkMode() ? "brightness_7" : "brightness_4"
+      }}</mat-icon>
+    </button>
+    <button mat-stroked-button (click)="toggleTheme()" class="theme-switch-btn">
+      {{
+        (themeService.isDarkMode() ? "switchToDarkMode" : "switchToLightMode")
+          | translate
+      }}
+    </button>
+  </div>
+</div>

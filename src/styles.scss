@@ -23,3 +23,11 @@ body {
   @include mat.all-component-colors(themes.$light-theme);
   background-color: #f4f4f4;
 }
+
+.hamburger-btn {
+  display: none !important;
+
+  @media screen and (max-width: 600px) {
+    display: block !important;
+  }
+}

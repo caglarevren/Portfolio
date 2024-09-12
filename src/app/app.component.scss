@@ -1,0 +1,12 @@
+.sidenav {
+  height: 100vh;
+
+  &-inner {
+    width: 88px;
+    border: none;
+
+    @media screen and (max-width: 600px) {
+      width: 200px;
+    }
+  }
+}
