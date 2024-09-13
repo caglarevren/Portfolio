@@ -13,5 +13,10 @@
   &-content {
     width: 100%;
     padding: 0px 36px;
+    padding-right: 120px;
+
+    @media screen and (max-width: 600px) {
+      padding-right: 36px;
+    }
   }
 }

@@ -1,18 +1,54 @@
 .hero {
   margin-top: 80px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 50px;
+  grid-row-gap: 0px;
 
-  &-logo {
-    margin-bottom: 40px;
+  @media screen and (max-width: 960px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 20px;
+    margin-top: 20px;
   }
+
+  @media screen and (max-width: 600px) {
+    margin-top: 0px;
+  }
+
+  &-left {
+    &-logo {
+      margin-bottom: 40px;
+    }
+  }
+
   &-text {
     font-weight: 400;
     font-size: 15px;
     text-align: justify;
     margin-bottom: 25px;
+
+    @media screen and (max-width: 600px) {
+      &:not(:last-child) {
+        margin-bottom: 25px;
+      }
+    }
   }
 
-  &-img {
-    width: 100%;
-    height: 100%;
+  &-right {
+    @media screen and (max-width: 600px) {
+      height: 400px;
+    }
+
+    &-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      @media screen and (max-width: 600px) {
+        object-fit: initial;
+      }
+    }
   }
 }

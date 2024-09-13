@@ -1,6 +1,8 @@
 import { Component, inject } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
+import { ThemeService } from '../../../theme/theme.service';
+
 import { MatGridListModule } from '@angular/material/grid-list';
 
 @Component({
@@ -12,4 +14,6 @@ import { MatGridListModule } from '@angular/material/grid-list';
 })
 export class HeroComponent {
   translate: TranslateService = inject(TranslateService);
+
+  constructor(public themeService: ThemeService) {}
 }

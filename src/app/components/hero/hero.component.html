@@ -1,20 +1,24 @@
 <main class="hero">
-  <mat-grid-list cols="2" rowHeight="500px" gutterSize="30px">
-    <mat-grid-tile>
-      <div>
-        <img
-          src="assets/images/handwritten-white.png"
-          class="hero-logo"
-          alt="caglarevren"
-        />
-        <p class="hero-text">{{ "heroParagraphOne" | translate }}</p>
-        <p class="hero-text">{{ "heroParagraphTwo" | translate }}</p>
-        <p class="hero-text">{{ "heroParagraphThree" | translate }}</p>
-      </div></mat-grid-tile
-    >
-    <mat-grid-tile>
-      <div>
-        <img src="assets/images/hero.svg" alt="hero" class="hero-img" /></div
-    ></mat-grid-tile>
-  </mat-grid-list>
+  <div class="hero-left">
+    @if (themeService.isDarkMode()) {
+    <img
+      src="assets/images/handwritten-white.png"
+      class="hero-left-logo"
+      alt="caglarevren"
+    />
+    } @else {
+    <img
+      src="assets/images/handwritten-black.png"
+      class="hero-left-logo"
+      alt="caglarevren"
+    />
+    }
+
+    <p class="hero-text">{{ "heroParagraphOne" | translate }}</p>
+    <p class="hero-text">{{ "heroParagraphTwo" | translate }}</p>
+    <p class="hero-text">{{ "heroParagraphThree" | translate }}</p>
+  </div>
+  <div class="hero-right">
+    <img src="assets/images/hero.svg" alt="hero" class="hero-right-img" />
+  </div>
 </main>
