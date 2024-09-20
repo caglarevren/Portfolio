@@ -1,0 +1,90 @@
+.timeline {
+  width: 80%;
+  height: auto;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+
+  &-content {
+    height: 180px;
+    transition: 0.4s ease;
+    overflow-wrap: break-word !important;
+
+    &-inner {
+      width: 170px;
+      position: absolute;
+      top: -15px;
+
+      &-right {
+        left: 25px;
+      }
+
+      &-left {
+        right: 25px;
+        text-align: right;
+      }
+
+      &-year {
+        font-size: 16px;
+        font-weight: 700;
+      }
+
+      &-company {
+        position: relative;
+        display: inline-block;
+        background: linear-gradient(45deg, #f27121, #e94057, #8a2387);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          height: 2px;
+          background: linear-gradient(45deg, #f27121, #e94057, #8a2387);
+        }
+
+        &:hover {
+          opacity: 0.8;
+          transition: 0.4s ease;
+        }
+      }
+
+      &-text {
+        font-size: 12px;
+        font-weight: lighter;
+        color: #919191;
+        margin-top: 10px;
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr 3px 1fr;
+
+    &-middle {
+      position: relative;
+      background-image: linear-gradient(45deg, #f27121, #e94057, #8a2387);
+      width: 3px;
+      height: 100%;
+    }
+
+    &-circle {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-image: linear-gradient(45deg, #f27121, #e94057, #8a2387);
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+    }
+  }
+}

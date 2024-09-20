@@ -19,6 +19,14 @@
     <p class="hero-text">{{ "heroParagraphThree" | translate }}</p>
   </div>
   <div class="hero-right">
-    <img src="assets/images/hero.svg" alt="hero" class="hero-right-img" />
+    @if (themeService.isDarkMode()) {
+    <img src="assets/icons/hero.svg" alt="hero" class="hero-right-img" />
+    } @else {
+    <img
+      src="assets/icons/hero-light.svg"
+      alt="hero light"
+      class="hero-right-img"
+    />
+    }
   </div>
 </main>

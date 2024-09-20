@@ -5,6 +5,7 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
 import { HeaderComponent } from './components/header/header.component';
 import { HeroComponent } from './components/hero/hero.component';
+import { ExperiencesComponent } from './components/experiences/experiences.component';
 
 import { MatSidenavModule, MatSidenav } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
@@ -19,6 +20,7 @@ import { MatButtonModule } from '@angular/material/button';
     CommonModule,
     HeaderComponent,
     HeroComponent,
+    ExperiencesComponent,
     MatIconModule,
     MatSidenavModule,
     MatButtonModule,

@@ -7,5 +7,15 @@
   "switchToLightMode": "Açık temaya geç",
   "heroParagraphOne": "Eğitimimi, Ankara Yıldırım Beyazıt Üniversitesi mühendislik fakultesinde tamamladım. Eğitim hayatımdan sonra yazılım dünyasına yöneldim ve ön yüz geliştirme alanında uzmanlaştım. React.js, Vue.js, Angular.js, Next.js, Nuxt.js gibi modern JavaScript framework'leri üzerine yoğunlaşarak, çeşitli büyük projelerde yer aldım.",
   "heroParagraphTwo": "Profesyonel kariyerime Etstur'da ön yüz geliştirici olarak başladım ve ardından Huawei, Softtech gibi büyük firmalarda çalışarak deneyim kazandım. Şu anda Payten'de ön yüz geliştirici olarak görev yapmakta ve ödeme sistemleri üzerine çalışmaktayım.",
-  "heroParagraphThree": "Kariyerimde, kullanıcı arayüzlerini yeniden tasarlamak, performans optimizasyonu yapmak ve yeni özellikler eklemek gibi görevlere ek olarak kullanıcı kimlik doğrulama, ödeme sistemleri ve form yönetimi gibi gelişmiş yazılım çözümlerine katkıda bulunuyorum."
+  "heroParagraphThree": "Kariyerimde, kullanıcı arayüzlerini yeniden tasarlamak, performans optimizasyonu yapmak ve yeni özellikler eklemek gibi görevlere ek olarak kullanıcı kimlik doğrulama, ödeme sistemleri ve form yönetimi gibi gelişmiş yazılım çözümlerine katkıda bulunuyorum.",
+  "ybuGraduated": "Ankara Yıldırım Beyazıt Üniversitesi Mühendislik Fakultesinden mezun oldum",
+  "university": "Üniversite",
+  "etstur": "Etstur",
+  "etsturTools": "Vue.js, React.js, TypeScript, SCSS, Jest",
+  "huawei": "Huawei",
+  "huaweiTools": "Vue.js, Vuex, TypeScript, SCSS, Jest",
+  "softtech": "Softtech",
+  "softtechTools": "Next.js, React Hooks, TypeScript, SCSS",
+  "payten": "Payten",
+  "paytenTools": "React.js, TypeScript, SCSS, Jest"
 }
